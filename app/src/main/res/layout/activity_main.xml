@@ -28,23 +28,19 @@
         >
 
         <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:id="@+id/toolbar"
 
             />
 
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/Hotstarlogo">
 
-
-
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@color/Hotstarlogo">
-
-    </View>
+        </View>
 
     <ImageView
         android:id="@+id/hamburger"

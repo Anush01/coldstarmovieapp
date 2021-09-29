@@ -1,5 +1,6 @@
 package com.example.anushmp.coldstarmovieapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -16,6 +17,8 @@ class MainActivity : AppCompatActivity() {
    lateinit var ivmenu : ImageView
    lateinit var drawernav: NavigationView
 
+   lateinit var ivsearch: ImageView
+
    lateinit var toolbar : androidx.appcompat.widget.Toolbar
 
 
@@ -27,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         ivmenu = findViewById(R.id.hamburger)
         drawernav = findViewById(R.id.drawernav)
         toolbar = findViewById(R.id.toolbar)
+        ivsearch = findViewById(R.id.searchbar)
 
         setSupportActionBar(toolbar)
 
@@ -48,6 +52,16 @@ class MainActivity : AppCompatActivity() {
         //drawernav.visibility = View.INVISIBLE
 
         //dwlayout.closeDrawer(drawernav)
+
+
+
+        ivsearch.setOnClickListener {
+
+            var searchintent : Intent = Intent(this,SearchActivity::class.java)
+
+            startActivity(searchintent)
+
+        }
 
 
 

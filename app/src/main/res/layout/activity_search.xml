@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Hotstarlogo"
+    tools:context=".SearchActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etSearchQuery"
+        android:background="@color/HotstarBlue"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Enter search query"
+        android:layout_margin="20dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Results"
+        android:id="@+id/getbutton"
+        android:layout_below="@+id/etSearchQuery"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:padding="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvmovies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/getbutton"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>
