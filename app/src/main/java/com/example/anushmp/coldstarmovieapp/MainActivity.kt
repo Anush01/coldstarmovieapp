@@ -9,6 +9,7 @@ import android.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +22,8 @@ class MainActivity : AppCompatActivity() {
 
    lateinit var toolbar : androidx.appcompat.widget.Toolbar
 
+   lateinit var botnav: BottomNavigationView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +34,11 @@ class MainActivity : AppCompatActivity() {
         drawernav = findViewById(R.id.drawernav)
         toolbar = findViewById(R.id.toolbar)
         ivsearch = findViewById(R.id.searchbar)
+        botnav = findViewById(R.id.bottomnav)
+
+
+
+        //var ji = BottomNavigationView.O
 
         setSupportActionBar(toolbar)
 

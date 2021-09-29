@@ -93,6 +93,7 @@
             app:itemRippleColor="@color/white"
             app:itemTextColor="@color/white"
             app:labelVisibilityMode="labeled"
+            android:id="@+id/bottomnav"
             app:menu="@menu/bottom_nav_menu" />
 
 
