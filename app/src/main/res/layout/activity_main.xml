@@ -42,6 +42,16 @@
 
         </View>
 
+        <androidx.fragment.app.FragmentContainerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragmentholder"
+            android:layout_below="@+id/hotstarlogo"
+            android:layout_above="@+id/bottomnav"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            app:defaultNavHost = "true"
+            app:navGraph = "@navigation/nav_graph"/>
+
     <ImageView
         android:id="@+id/hamburger"
         android:layout_width="wrap_content"

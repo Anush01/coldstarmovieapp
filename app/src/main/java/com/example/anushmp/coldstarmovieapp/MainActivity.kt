@@ -14,6 +14,10 @@ import androidx.core.view.GravityCompat
 import androidx.core.view.get
 import androidx.core.view.size
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
@@ -28,6 +32,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var toolbar: androidx.appcompat.widget.Toolbar
 
     lateinit var botnav: BottomNavigationView
+    lateinit var nc: NavController
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,6 +46,10 @@ class MainActivity : AppCompatActivity() {
         toolbar = findViewById(R.id.toolbar)
         ivsearch = findViewById(R.id.searchbar)
         botnav = findViewById(R.id.bottomnav)
+
+
+        nc= findNavController(R.id.fragmentholder)
+        botnav.setupWithNavController(nc)
 
 
         //var menuitem1: MenuItem? = drawernav.checkedItem
