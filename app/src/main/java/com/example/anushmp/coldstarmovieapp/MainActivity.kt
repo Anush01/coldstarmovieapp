@@ -3,26 +3,31 @@ package com.example.anushmp.coldstarmovieapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
+import android.widget.Toast
 import android.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
+import androidx.core.view.get
+import androidx.core.view.size
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
 
-   lateinit var dwlayout : DrawerLayout
-   lateinit var ivmenu : ImageView
-   lateinit var drawernav: NavigationView
+    lateinit var dwlayout: DrawerLayout
+    lateinit var ivmenu: ImageView
+    lateinit var drawernav: NavigationView
 
-   lateinit var ivsearch: ImageView
+    lateinit var ivsearch: ImageView
 
-   lateinit var toolbar : androidx.appcompat.widget.Toolbar
+    lateinit var toolbar: androidx.appcompat.widget.Toolbar
 
-   lateinit var botnav: BottomNavigationView
+    lateinit var botnav: BottomNavigationView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,12 +42,23 @@ class MainActivity : AppCompatActivity() {
         botnav = findViewById(R.id.bottomnav)
 
 
+        //var menuitem1: MenuItem? = drawernav.checkedItem
+
+       // var menu: Menu = drawernav.menu
+
+        //var menuItem1: MenuItem = menu[0]
+
+
+
+
+
 
         //var ji = BottomNavigationView.O
 
         setSupportActionBar(toolbar)
 
-        var togglee: ActionBarDrawerToggle = ActionBarDrawerToggle(this,dwlayout,R.string.nav_open,R.string.nav_close)
+        var togglee: ActionBarDrawerToggle =
+            ActionBarDrawerToggle(this, dwlayout, R.string.nav_open, R.string.nav_close)
 
         dwlayout.addDrawerListener(togglee)
 
@@ -62,15 +78,13 @@ class MainActivity : AppCompatActivity() {
         //dwlayout.closeDrawer(drawernav)
 
 
-
         ivsearch.setOnClickListener {
 
-            var searchintent : Intent = Intent(this,SearchActivity::class.java)
+            var searchintent: Intent = Intent(this, SearchActivity::class.java)
 
             startActivity(searchintent)
 
         }
-
 
 
     }
@@ -78,16 +92,16 @@ class MainActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
 
-        if(dwlayout.isDrawerOpen(GravityCompat.START)){
+        if (dwlayout.isDrawerOpen(GravityCompat.START)) {
             dwlayout.closeDrawer(drawernav)
-        }else {
+        } else {
 
             super.onBackPressed()
 
         }
-        }
-
-
+    }
 
 
 }
+
+
