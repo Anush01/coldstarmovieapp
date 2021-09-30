@@ -23,7 +23,8 @@ class SearchActivity : AppCompatActivity() {
 
     val key: String = "b72440004b952dc62c3b8f367ac3d52a"
 
-    val urlprefix: String = "https://image.tmdb.org/t/p/original"
+    //original
+    val urlprefix: String = "https://image.tmdb.org/t/p/w500"
 
    var urlList: ArrayList<String> = ArrayList()
 
