@@ -7,14 +7,14 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class PosterAdapter(var urlList:ArrayList<String>):RecyclerView.Adapter<PosterAdapter.PosterVh>() {
+class PosterAdapter(var urlList:ArrayList<String>, var titleList:ArrayList<String>, var clicker: Clicker):RecyclerView.Adapter<PosterAdapter.PosterVh>() {
 
 
 
 
 
 
-    inner class PosterVh(itemView: View): RecyclerView.ViewHolder(itemView){
+    inner class PosterVh(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener{
 
 
     var posterview: ImageView = itemView.findViewById(R.id.posterview)
@@ -26,8 +26,14 @@ class PosterAdapter(var urlList:ArrayList<String>):RecyclerView.Adapter<PosterAd
             Glide.with(itemView).load(url).placeholder(R.drawable.ic_launcher_foreground).into(posterview)
 
 
+            posterview.setOnClickListener(this)
 
 
+
+        }
+
+        override fun onClick(v: View?) {
+            clicker.whenclicked(adapterPosition)
         }
 
 

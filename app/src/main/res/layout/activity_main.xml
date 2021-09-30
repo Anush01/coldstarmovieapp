@@ -13,9 +13,12 @@
         android:id="@+id/drawernav"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="#2B3A8E"
+        android:background="@color/Hotstarlogo"
         app:headerLayout="@layout/nav_header"
         android:layout_gravity="left"
+        app:itemIconSize="35dp"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
 
     app:menu="@menu/bottom_nav_menu" />
 
@@ -42,10 +45,10 @@
 
         </View>
 
-        <androidx.fragment.app.FragmentContainerView
+        <fragment
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/fragmentholder"
+            android:id="@+id/navhostfragment"
             android:layout_below="@+id/hotstarlogo"
             android:layout_above="@+id/bottomnav"
             android:name="androidx.navigation.fragment.NavHostFragment"
@@ -70,18 +73,18 @@
         android:scaleType="fitXY"
         android:src="@drawable/hotstarhorzlogo" />
 
-    <Button
-        android:id="@+id/subbutton"
-        android:layout_width="90dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="28dp"
-        android:layout_toRightOf="@+id/hotstarlogo"
-        android:backgroundTint="#00AFFF"
-        android:text="subscribe"
-        android:textSize="8dp"
+        <Button
+            android:id="@+id/subbutton"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="28dp"
+            android:layout_toRightOf="@+id/hotstarlogo"
+            android:backgroundTint="#00AFFF"
+            android:text="subscribe"
+            android:textSize="8dp"
 
 
-        />
+            />
 
         <ImageView
             android:id="@+id/searchbar"

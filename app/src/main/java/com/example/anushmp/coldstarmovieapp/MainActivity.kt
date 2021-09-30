@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var nc: NavController
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -48,19 +47,17 @@ class MainActivity : AppCompatActivity() {
         botnav = findViewById(R.id.bottomnav)
 
 
-        nc= findNavController(R.id.fragmentholder)
+        nc = findNavController(R.id.navhostfragment)
         botnav.setupWithNavController(nc)
+
+        drawernav.setupWithNavController(nc)
 
 
         //var menuitem1: MenuItem? = drawernav.checkedItem
 
-       // var menu: Menu = drawernav.menu
+        // var menu: Menu = drawernav.menu
 
         //var menuItem1: MenuItem = menu[0]
-
-
-
-
 
 
         //var ji = BottomNavigationView.O
@@ -110,6 +107,8 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
+
+
 
 
 }
