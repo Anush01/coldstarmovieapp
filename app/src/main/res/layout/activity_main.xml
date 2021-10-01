@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/dwlayout"
     tools:context=".MainActivity"
-    android:background="#09155A">
+    android:background="@color/logoblue">
 
 
     <com.google.android.material.navigation.NavigationView

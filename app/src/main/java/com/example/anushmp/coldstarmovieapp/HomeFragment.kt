@@ -52,8 +52,9 @@ class HomeFragment : Fragment() {
 
             //var i : Intent = Intent(context,TrailerViewActivity::class.java)
            // var i : Intent = Intent(context,ViewPagerContextMenuTesterActivity::class.java)
+            var i : Intent = Intent(context,MovieDetailActivity::class.java)
 
-           // startActivity(i)
+           startActivity(i)
         }
 
 

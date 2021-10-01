@@ -38,12 +38,13 @@
         android:layout_below="@+id/cvsearchquery"
         android:layout_centerHorizontal="true"
         android:backgroundTint="#FF9800"
-        android:textStyle="bold"
         android:drawableEnd="@drawable/ic_baseline_search_24"
         android:text="search"
         android:textAllCaps="false"
-        app:cornerRadius="10dp"
-        android:textColor="#FFFAFA" />
+        android:textColor="#FFFAFA"
+        android:textStyle="bold"
+        android:padding="10dp"
+        app:cornerRadius="18dp" />
 
     <View
         android:layout_width="match_parent"
