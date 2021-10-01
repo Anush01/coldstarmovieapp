@@ -17,6 +17,7 @@ private const val ARG_PARAM2 = "param2"
  * A simple [Fragment] subclass.
  * Use the [HomeFragment.newInstance] factory method to
  * create an instance of this fragment.
+ * var view: View = LayoutInflater.from(parent.context).inflate(R.layout.poster_item_view,this,false)
  */
 class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/HotstarBlue"
+    tools:context=".MovieDetailActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/posterholder"
+        android:src="@drawable/dougy"
+        android:layout_margin="20dp"
+        android:background="@color/HotstarDarkBlue"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/playmovie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/posterholder"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:drawableEnd="@drawable/ic_baseline_spa_small"
+        android:backgroundTint="#FF9800"
+        android:padding="20dp"
+        android:text="Play Movie"
+        android:textAllCaps="false"
+        app:cornerRadius="20dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/showtrailer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/posterholder"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toRightOf="@+id/playmovie"
+        android:backgroundTint="#FF5722"
+        android:drawableEnd="@drawable/ic_baseline_spa_small"
+        android:padding="20dp"
+        android:text="Show trailer"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp" />
+
+    <View
+        android:id="@+id/div"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/showtrailer"
+        android:background="@color/HotstarHighlightBlue" />
+
+    <View
+        android:id="@+id/div2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/posterholder"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/HotstarHighlightBlue" />
+
+    <TextView
+        android:id="@+id/movieTitleHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/div"
+        android:layout_margin="20dp"
+        android:text="This is a movie title"
+        android:textColor="@color/white"
+        android:textSize="35sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptionholder"
+        android:text="This is a movie decription and it is long and it goes on and on"
+        android:layout_below="@id/movieTitleHolder"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/ReleaseDateholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descriptionholder"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+
+        android:text="Released in"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+
+
+</RelativeLayout>
