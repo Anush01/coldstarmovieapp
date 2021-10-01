@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:id="@+id/dwlayout"
     tools:context=".MainActivity"
-    android:background="@color/logoblue">
+    android:background="@color/HotstarBlue">
 
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/drawernav"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="@color/Hotstarlogo"
+        android:background="@color/HotstarBlue"
         app:headerLayout="@layout/nav_header"
         android:layout_gravity="left"
         app:itemIconSize="35dp"
@@ -41,7 +41,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:background="@color/Hotstarlogo">
+            android:background="@color/HotstarBlue">
 
         </View>
 
@@ -63,15 +63,15 @@
         android:layout_marginTop="20dp"
         android:src="@drawable/ic_baseline_menu_24" />
 
-    <ImageView
-        android:id="@+id/hotstarlogo"
-        android:layout_width="150dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="6dp"
-        android:layout_toRightOf="@+id/hamburger"
-        android:scaleType="fitXY"
-        android:src="@drawable/hotstarhorzlogo" />
+        <ImageView
+            android:id="@+id/hotstarlogo"
+            android:layout_width="150dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/hamburger"
+            android:scaleType="fitXY"
+            android:src="@drawable/logonobg" />
 
         <Button
             android:id="@+id/subbutton"
@@ -101,7 +101,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="@color/Hotstarlogo"
+            android:background="@color/HotstarBlue"
             app:itemIconTint="@color/white"
             app:itemRippleColor="@color/white"
             app:itemTextColor="@color/white"
