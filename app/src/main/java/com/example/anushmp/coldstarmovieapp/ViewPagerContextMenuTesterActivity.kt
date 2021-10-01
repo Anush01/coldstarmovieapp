@@ -33,6 +33,33 @@ class ViewPagerContextMenuTesterActivity : AppCompatActivity() {
 
         vp2.adapter = TestViewPagerAdapter(imagelist)
 
+       // vp2.clipToPadding = false
+
+       // vp2.clipChildren = false
+
+
+
+        vp2.setPageTransformer { page, position ->
+
+            page.cameraDistance = 20000F
+
+            if (position<-1){page.alpha = 0f}else if(position<=0){
+                page.alpha = 1f
+                page.pivotX = page.width.toFloat()
+                page.rotationY = -90*Math.abs(position)
+
+
+            }else if(position<=1){
+                page.alpha = 1f
+                page.pivotX = 0f
+                page.rotationY = 90*Math.abs(position)
+            }else{
+                page.alpha = 0f
+            }
+
+
+        }
+
 
 
     }
