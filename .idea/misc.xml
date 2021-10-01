@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_search.xml" value="0.33541666666666664" />
         <entry key="app/src/main/res/layout/activity_trailer_view.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_view_pager_context_menu_tester.xml" value="0.390625" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.390625" />
         <entry key="app/src/main/res/layout/fragment_movies.xml" value="0.390625" />
         <entry key="app/src/main/res/layout/fragment_sports.xml" value="0.390625" />
@@ -16,6 +17,7 @@
         <entry key="app/src/main/res/layout/nav_header.xml" value="0.33541666666666664" />
         <entry key="app/src/main/res/layout/poster_item_view.xml" value="0.21052631578947367" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/menu/item_options_menu.xml" value="0.390625" />
       </map>
     </option>
   </component>
