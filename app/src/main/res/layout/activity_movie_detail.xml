@@ -79,30 +79,36 @@
         android:textColor="@color/white"
         android:textSize="35sp" />
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/descriptionholderscroll"
+        android:layout_below="@id/movieTitleHolder">
     <TextView
+        android:id="@+id/descriptionholder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/descriptionholder"
-        android:text="This is a movie decription and it is long and it goes on and on"
-        android:layout_below="@id/movieTitleHolder"
-        android:textColor="@color/white"
-        android:textStyle="italic"
+
         android:layout_marginStart="20dp"
         android:layout_marginEnd="10dp"
+        android:text="This is a movie decription and it is long and it goes on and on"
+        android:textColor="@color/white"
         android:textSize="18sp"
-        />
+        android:textStyle="italic" />
+
+    </ScrollView>
 
     <TextView
         android:id="@+id/ReleaseDateholder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/descriptionholder"
+        android:layout_below="@id/descriptionholderscroll"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
 
-        android:text="Released in"
+        android:text="Released in - "
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="italic" />

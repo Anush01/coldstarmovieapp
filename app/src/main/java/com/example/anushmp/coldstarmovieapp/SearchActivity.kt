@@ -1,6 +1,7 @@
 package com.example.anushmp.coldstarmovieapp
 
 import android.content.Intent
+import android.graphics.Movie
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -28,9 +29,13 @@ class SearchActivity : AppCompatActivity(), Clicker {
 
     //original
     val urlprefix: String = "https://image.tmdb.org/t/p/w500"
+    val bigposterurlprefix: String = "https://image.tmdb.org/t/p/original"
 
     var urlList: ArrayList<String> = ArrayList()
     var titleList: ArrayList<String> = ArrayList()
+    var bigposterlist: ArrayList<String> = ArrayList()
+    var overviewlist: ArrayList<String> = ArrayList()
+    var releasedatelist: ArrayList<String> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -79,26 +84,43 @@ class SearchActivity : AppCompatActivity(), Clicker {
 
                     //run for loop add prefix build list and pass list to adapter.
 
+                    //splashscreen
+                    //sports fragment
+                    //movie fragment
+
+
+                    //handler.
+                    //half baked.
+
                     urlList.clear()
                     titleList.clear()
+                    bigposterlist.clear()
+                    overviewlist.clear()
+                    //video lloyd watchlist ui bigposter. waiting to be asked assh room //login watchlist sunshine
+                    releasedatelist.clear()
 
                     if (resultlist != null) {
                         for (i in 0 until resultlist.size){
 
                             var poster_path = resultlist[i].poster_path
                             var urlcomplete: String = urlprefix + poster_path
+                            var bigposterurlcomplete:String = bigposterurlprefix + poster_path
 
                             movietitle = resultlist[i].original_title
 
                             urlList.add(urlcomplete)
                             titleList.add(movietitle)
+                            bigposterlist.add(bigposterurlcomplete)
+
+                            overviewlist.add(resultlist[i].overview)
+                            releasedatelist.add(resultlist[i].release_date)
 
                         }
 
 
                     }
 
-                    var addy:PosterAdapter = PosterAdapter(urlList,titleList,clicker)
+                    var addy:PosterAdapter = PosterAdapter(urlList,titleList,bigposterlist,overviewlist,releasedatelist,clicker)
 
                     var glm: GridLayoutManager = GridLayoutManager(parent,4,GridLayoutManager.VERTICAL,false)
 
@@ -128,17 +150,26 @@ class SearchActivity : AppCompatActivity(), Clicker {
     override fun whenclicked(position: Int) {
 
         var title = titleList[position]
+        var overview = overviewlist[position]
+        var releasedate = releasedatelist[position]
+        var posterurl = urlList[position]
+        var bigposterurl = bigposterlist[position]
 
         Log.d("q1logs",title)
 
         //intent add title and fire the trailerviewacvtitiy
 
-        var i: Intent = Intent(this,TrailerViewActivity::class.java)
+        //var i: Intent = Intent(this,TrailerViewActivity::class.java)
+        var i: Intent = Intent(this,MovieDetailActivity::class.java)
 
         //context
         //this
 
         i.putExtra("title",title)
+        i.putExtra("overview",overview)
+        i.putExtra("releasedate",releasedate)
+        i.putExtra("posterurl",posterurl)
+        i.putExtra("bigposterurl",bigposterurl)
 
         startActivity(i)
 

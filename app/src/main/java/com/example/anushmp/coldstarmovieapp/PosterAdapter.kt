@@ -7,8 +7,21 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class PosterAdapter(var urlList:ArrayList<String>, var titleList:ArrayList<String>, var clicker: Clicker):RecyclerView.Adapter<PosterAdapter.PosterVh>() {
+class PosterAdapter(var urlList:ArrayList<String>
+,var titleList:ArrayList<String>
+,var bigposterlist:ArrayList<String>
+,var overviewlist:ArrayList<String>
+,var releasedatelist:ArrayList<String>
+,var clicker: Clicker):RecyclerView.Adapter<PosterAdapter.PosterVh>() {
 
+
+    //overview
+    //releasedate
+
+    //giant poster
+
+    //generic.
+    //last minute.
 
 
 

@@ -16,7 +16,7 @@
         android:background="@color/HotstarBlue"
         app:headerLayout="@layout/nav_header"
         android:layout_gravity="left"
-        app:itemIconSize="35dp"
+        app:itemIconSize="20dp"
         app:itemTextColor="@color/white"
         app:itemIconTint="@color/white"
 
