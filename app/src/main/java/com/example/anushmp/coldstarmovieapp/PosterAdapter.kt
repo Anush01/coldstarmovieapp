@@ -41,6 +41,8 @@ class PosterAdapter(var urlList:ArrayList<String>
 
             posterview.setOnClickListener(this)
 
+            //posterview.apply {  }
+
 
 
         }
